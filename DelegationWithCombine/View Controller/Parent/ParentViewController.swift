@@ -27,8 +27,8 @@ class ParentViewController: UIViewController {
         child.childMessagePublisher.handleEvents(receiveOutput: { [unowned self] message in
             self.messageLabel.text = message
         })
-            .sink { _ in }
-            .store(in: &subscriptions)
+        .sink { _ in }
+        .store(in: &subscriptions)
         
         
         self.present(child, animated: true)
